@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Basic Intro Page</title>
+</head>
+<body>
+<table>
+<tr>
+	<td>Name: Sharat Babu Jami</td>
+</tr>
+<tr>
+	<td>Address: Andhra Pradesh</td>
+</tr>
+<tr>
+	<td>Email: sharatbabu.jami@g,ail.com</td>
+</tr>
+<tr>
+	<td>Phone No: 9642487047</td>
+</tr>
+</table>
+	<select id="edu" onchange= "myFunction()">
+		<option selected>Education
+		<option value="1">Xth</option>
+		<option value="2">XIIth</option>
+		<option value="3">BCA</option>
+		<option value="4">MCA</option>
+		<option value="5">M.Tech</option>
+	</select>
+<table border="1">
+<tr><td>Education</td><th><center>Year of Passing</center></th><th><center>Subject</center></th><th><center>Marks</center></th></tr>
+<tr id="1" style="display : none"><td>X</td><td>2004</td><td>SSC</td><td>72%</td></tr>
+<tr id="2" style="display : none"><td>XII</td><td>2006</td><td>HSC</td><td>72%</td></tr>
+<tr id="3" style="display : none"><td>BCA</td><td>2010</td><td>IT</td><td>59%</td></tr>
+<tr id="4" style="display : none"><td>MCA</td><td>2015</td><td>IT</td><td>62%</td></tr>
+<tr id="5" style="display : none"><td>M.Tech</td><td>2018</td><td>IT</td><td>8.9</td></tr>
+</table>
+</tr>
+
+</table>
+</body>
+
+<script type="text/javascript">
+function myFunction()
+{
+	document.getElementById('1').style.display = "none";
+	document.getElementById('2').style.display = "none";
+	document.getElementById('3').style.display = "none";
+	document.getElementById('4').style.display = "none";
+	document.getElementById('5').style.display = "none";
+	var e = document.getElementById("edu").value;
+	document.getElementById(e).style.display = "";
+}
+cloudinary.image("187971875.jpg", 
+                 { type: 'instagram', width: 90, height: 90, crop: 'thumb', 
+                   gravity: face, radius: 'max', 'effect': 'improve', 
+                   border: '2px_solid_black'  });
+</script>
+</html>

@@ -1,0 +1,219 @@
+<!DocType>
+<html>
+<head>
+</head>
+<style>
+	.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+</style>
+<body>
+
+<div class="chart"></div>
+</body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script type="text/javascript">
+	var data = [
+  {
+    "Rank": 1,
+    "State": "Uttar Pradesh",
+    "Population": 16.49
+  },
+  {
+    "Rank": 2,
+    "State": "Maharashtra",
+    "Population": 9.28
+  },
+  {
+    "Rank": 3,
+    "State": "Bihar",
+    "Population": 8.58
+  },
+  {
+    "Rank": 4,
+    "State": "West Bengal",
+    "Population": 7.55
+  },
+  {
+    "Rank": 5,
+    "State": "Madhya Pradesh",
+    "Population": 6.00
+  },
+  {
+    "Rank": 6,
+    "State": "Tamil Nadu",
+    "Population": 5.96
+  },
+  {
+    "Rank": 7,
+    "State": "Rajasthan",
+    "Population": 5.67
+  },
+  {
+    "Rank": 8,
+    "State": "Karnataka",
+    "Population": 5.05
+  },
+  {
+    "Rank": 9,
+    "State": "Gujarat",
+    "Population": 5.00
+  },
+  {
+    "Rank": 10,
+    "State": "Andhra Pradesh",
+    "Population": 4.08
+  },
+  {
+    "Rank": 11,
+    "State": "Odisha",
+    "Population": 3.47
+  },
+  {
+    "Rank": 12,
+    "State": "Telangana",
+    "Population": 2.97
+  },
+  {
+    "Rank": 13,
+    "State": "Kerala",
+    "Population": 2.76
+  },
+  {
+    "Rank": 14,
+    "State": "Jharkhand",
+    "Population": 2.72
+  },
+  {
+    "Rank": 15,
+    "State": "Assam",
+    "Population": 2.58
+  },
+  {
+    "Rank": 16,
+    "State": "Punjab",
+    "Population": 2.30
+  },
+  {
+    "Rank": 17,
+    "State": "Chhattisgarh",
+    "Population": 2.11
+  },
+  {
+    "Rank": 18,
+    "State": "Haryana",
+    "Population": 2.09
+  },
+  {
+    "Rank": 19,
+    "State": "Jammu and Kashmir",
+    "Population": 1.04
+  },
+  {
+    "Rank": 20,
+    "State": "Uttarakhand",
+    "Population": 0.84
+  },
+  {
+    "Rank": 21,
+    "State": "Himachal Pradesh",
+    "Population": 0.57
+  },
+  {
+    "Rank": 22,
+    "State": "Tripura",
+    "Population": 0.30
+  },
+  {
+    "Rank": 23,
+    "State": "Meghalaya",
+    "Population": 0.24
+  },
+  {
+    "Rank": 24,
+    "State": "Manipur?",
+    "Population": 0.22
+  },
+  {
+    "Rank": 25,
+    "State": "Nagaland",
+    "Population": 0.16
+  },
+  {
+    "Rank": 26,
+    "State": "Goa",
+    "Population": 0.12
+  },
+  {
+    "Rank": 27,
+    "State": "Arunachal Pradesh",
+    "Population": 0.11
+  },
+  {
+    "Rank": 28,
+    "State": "Mizoram",
+    "Population": 0.09
+  },
+  {
+    "Rank": 29,
+    "State": "Sikkim",
+    "Population": 0.05
+  },
+  {
+    "Rank": "NCT",
+    "State": "Delhi",
+    "Population": 1
+  },
+  {
+    "Rank": "UT1",
+    "State": "Puducherry",
+    "Population": 0.10
+  },
+  {
+    "Rank": "UT2",
+    "State": "Chandigarh",
+    "Population": 0.09
+  },
+  {
+    "Rank": "UT3",
+    "State": "Andaman and Nicobar Islands",
+    "Population": 0.03
+  },
+  {
+    "Rank": "UT4",
+    "State": "Dadra and Nagar Haveli",
+    "Population": 0.03
+  },
+  {
+    "Rank": "UT5",
+    "State": "Daman and Diu",
+    "Population": 0.02
+  },
+  {
+    "Rank": "UT6",
+    "State": "Lakshadweep",
+    "Population": 0.01
+  }
+];
+
+d3.select(".chart")
+  
+	.selectAll("div")
+  
+	.data(data)
+    
+	.enter()
+    
+	.append("div")
+    
+	.style("width", function(data) { return data.Population*60 + "px"; })
+    
+	.text(function(data) { return data.State; });
+//console.log(data)
+</script>
+</html>
